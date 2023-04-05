@@ -144,7 +144,7 @@ class ListenerTest {
     private QueueMessagingTemplate queueMessagingTemplate;
 
     @Test
-    void messageShouldBeUploadedToBucketOnceConsumedFromQueue() {
+    void messageShouldBeLogged() {
         queueMessagingTemplate.send(QUEUE_NAME, new GenericMessage<>("""
         {
            "message": "teste"
